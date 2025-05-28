@@ -31,10 +31,10 @@ public class App {
                 opcion = sc.nextInt();
             } else {
                 System.out.println("Por favor ingrese un numero valido.");
-                sc.next(); // descartar el input no válido
+                sc.next(); 
                 continue;
             }
-            sc.nextLine(); // consumir el salto de línea
+            sc.nextLine(); 
 
             switch (opcion) {
                 case 1:
@@ -59,7 +59,7 @@ public class App {
                     System.out.println("Opcion no válida, por favor intente de nuevo.");
             }
         } while (opcion != 6);
-        //prueba de pedidos
+        
         siguienteIdPedido = pedidoService.addPedido(pedidos, articulos, sc, siguienteIdPedido);
         System.out.println(pedidoService.getPedido(pedidos, sc));
         pedidoService.updatePedido(sc, pedidos, articulos);
